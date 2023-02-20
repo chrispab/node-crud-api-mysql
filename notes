@@ -1,0 +1,12 @@
+#initialize a new npm project
+npm init -y
+
+# install the dependencies
+npm i express mysql sequelize
+
+
+docker compose up -d node_db
+
+docker compose build
+
+docker compose up node_app

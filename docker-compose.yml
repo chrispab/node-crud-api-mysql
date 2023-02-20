@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  node_app:
+    container_name: node_app
+    build: .
+    image: chrispabzzz/node_live_app
+    ports:
+      - "3000:3000"
+    environment:
+      - MYSQL_DATABASE=node_live_db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_HOST=node_db
+    depends_on:
+      - node_db
+
+  node_db:
+    container_name: node_db
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=node_live_db
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - node_db_data:/var/lib/mysql
+
+volumes:
+  node_db_data: {}
