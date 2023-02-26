@@ -10,3 +10,24 @@ docker compose up -d node_db
 docker compose build
 
 docker compose up node_app
+
+
+
+node index.js
+// Linux or MacOS
+PORT=8000 nodemon app.js
+
+MYSQL_DATABASE=node_live_db MYSQL_USER=root MYSQL_PASSWORD=password MYSQL_HOST=localhost node index.js
+
+
+install dotenv
+
+
+I am also installing nodemon as a dev dependency. It will restart our server automatically when we update our code.
+npm install --save-dev nodemon
+
+
+
+If you don't want to import and use the config() function inside your JavaScript file, there is another way to load a .env file. You can load it using the command line.
+
+node -r dotenv/config index.js
