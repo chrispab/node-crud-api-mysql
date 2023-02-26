@@ -1,3 +1,5 @@
+https://dev.to/francescoxx/build-a-crud-rest-api-in-javascript-using-nodejs-express-postgres-docker-jkb
+
 #initialize a new npm project
 npm init -y
 
@@ -19,7 +21,7 @@ PORT=8000 nodemon app.js
 
 MYSQL_DATABASE=node_live_db MYSQL_USER=root MYSQL_PASSWORD=password MYSQL_HOST=localhost node index.js
 
-
+https://www.webmound.com/nodejs-environment-variables/
 install dotenv
 
 
